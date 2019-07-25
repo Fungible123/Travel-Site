@@ -1,8 +1,10 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Akaw Beach Resort`,
+    description: `Akaw beach resort is a travel site intended for people who want a website for their travel business`,
+    author: `Donny Layug`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,22 +15,42 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Akaw Beach Resort`,
+        short_name: `Akaw`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`pacifico`, `belleza`],
+        display: `swap`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "src/components"),
+          "@common": path.resolve(__dirname, "src/components/common"),
+          "@images": path.resolve(__dirname, "src/images"),
+          "@sections": path.resolve(__dirname, "src/components/sections"),
+          "@styles": path.resolve(__dirname, "src/styles/"),
+          "@static": path.resolve(__dirname, "static/"),
+          "@elements": path.resolve(__dirname, "src/elements"),
+        },
+      },
+    },
   ],
 }
