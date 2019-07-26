@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     h1 {
         font-family: ${props => props.theme.font.primary};
         color: ${props => props.theme.color.colorful.teal};
-        ${props => props.theme.font_size.xlarge};
+        ${props => props.theme.font_size.xlarge}
     }
 
     h2 {

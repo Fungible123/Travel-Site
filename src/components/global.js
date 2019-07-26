@@ -31,8 +31,8 @@ export const Container = styled.div`
 export const Section = styled.section`
   padding: 128px 0;
   overflow: hidden;
-  background-color: ${props => props.theme.color.colorful.flesh} @media
-    (max-width: ${props => props.theme.screen.md}) {
+  background-color: ${props => props.theme.color.colorful.flesh};
+  @media (max-width: ${props => props.theme.screen.md}) {
     padding: 96px 0;
   }
 `

@@ -46,6 +46,7 @@ export const NavItem = styled.li`
     text-decoration: none;
     text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
     color: ${props => props.theme.color.light};
+    transition: 0.2s ease-in;
     &:hover {
       color: ${props => props.theme.color.colorful.orange};
     }

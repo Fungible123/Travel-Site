@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Container } from "@components/global"
@@ -57,7 +58,9 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Logo>Akaw Resort</Logo>
+          <Logo>
+            <Link to="/">Akaw Resort</Link>
+          </Logo>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: "black" }}>
               <MenuIcon />
