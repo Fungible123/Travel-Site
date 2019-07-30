@@ -33,6 +33,7 @@ export const NavListWrapper = styled.div`
             > ${NavItem} {
                 margin: 0;
                 margin-top: .75em;
+                text-align: right;
             }
         `}
   }
@@ -70,17 +71,17 @@ export const Logo = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 10px;
-  ${props => props.theme.font_size.xlarge};
+  ${props => props.theme.font_size.large};
 `
 
 export const Mobile = styled.div`
-  visibility: hidden;
+  display: none;
   opacity: 0;
   z-index: -1;
   transition: 0.2s ease-in;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    visibility: visible;
+    display: block;
     opacity: 1;
     z-index: 1000;
   }
@@ -88,12 +89,12 @@ export const Mobile = styled.div`
   ${props =>
     props.hide &&
     `
-    visibility: visible;
+    display: block;
     opacity: 1;
     z-index: 1000;
 
      @media (max-width: ${props.theme.screen.md}) {
-        visibility: hidden;
+      display: none;
         opacity: 0;
         z-index: -1;
         transition: 0.2s ease-in;

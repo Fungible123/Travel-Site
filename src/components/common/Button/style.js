@@ -4,9 +4,8 @@ export const Book = styled.button`
   background: rgba(255, 137, 71, 0.8);
   border-radius: 10px;
   height: 60px;
-  width: 416px;
-  position: absolute;
-  top: 100px;
+  width: 100%;
+  margin: 20px auto;
   transition: 0.2s ease-in-out;
   &:hover {
     background: #fd5d02;

@@ -62,7 +62,14 @@ class Navbar extends Component {
             <Link to="/">Akaw Resort</Link>
           </Logo>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: "black" }}>
+            <button
+              onClick={this.toggleMobileMenu}
+              style={{
+                color: "white",
+                background: "none",
+                border: "none",
+              }}
+            >
               <MenuIcon />
             </button>
           </Mobile>
