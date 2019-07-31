@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Container } from "@components/global"
 
 export const Nav = styled.nav`
-  padding: 28px 0;
+  padding: 15px 0;
   background-color: none;
   position: fixed;
   width: 100%;
