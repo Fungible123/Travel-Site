@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@reach/dialog": "^0.2.9",
     "@svgr/webpack": "^4.3.2",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.36",

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Img from "gatsby-image"
 
 const Container = styled.div`
-  padding: 40px;
+  padding: 150px 40px;
   background: ${props => props.theme.color.colorful.flesh};
 `
 

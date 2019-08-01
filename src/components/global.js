@@ -31,7 +31,7 @@ export const Container = styled.div`
 export const Section = styled.section`
   padding: 0;
   overflow: hidden;
-  background: -webkit-linear-gradient(90deg, #00cdb4 0%, #00a4d8 100%);
+  background-image: linear-gradient(90deg, #00e2c7 0%, #00a4d8 100%);
   @media (max-width: ${props => props.theme.screen.md}) {
     padding: 0;
   }

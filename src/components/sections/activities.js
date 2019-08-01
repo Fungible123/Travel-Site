@@ -10,7 +10,7 @@ const Activities = () => {
     query {
       activity1: file(relativePath: { eq: "activity1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 406, quality: 100) {
+          fluid(maxWidth: 579, maxHeight: 406, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -46,6 +46,32 @@ const Activities = () => {
           <Button />
         </Content>
       </Grid>
+      <Grid inverse>
+        <Content>
+          <h2>SWIMMING POOLS</h2>
+          <h3>
+            We also have a large outdoor pool alongside a kiddie pool for your
+            kids to enjoy.
+          </h3>
+          <Button />
+        </Content>
+        <ActivityImage>
+          <Img fluid={activity.activity2.childImageSharp.fluid} />
+        </ActivityImage>
+      </Grid>
+      <Grid>
+        <ActivityImage>
+          <Img fluid={activity.activity3.childImageSharp.fluid} />
+        </ActivityImage>
+        <Content>
+          <h2>RECEPTIONS</h2>
+          <h3>
+            Our outdoor reception is also perfect for wedding receptions,
+            parties, events, or meetings.
+          </h3>
+          <Button />
+        </Content>
+      </Grid>
     </Section>
   )
 }
@@ -61,7 +87,7 @@ const Grid = styled.div`
   ${props =>
     props.inverse &&
     `
-    text-align: right;
+    text-align: left;
     grid-template-columns: 3fr 2fr;
   `}
   h2 {
@@ -77,7 +103,7 @@ const Grid = styled.div`
     ${props =>
       props.inverse &&
       `
-        ${ActivityImage} {
+        ${Content} {
           order: 2;
         }
     `}
@@ -91,7 +117,7 @@ const ActivityImage = styled.figure`
 
 const Content = styled.div`
   margin: 30px;
-  padding: 20px;
+  padding: 10px 40px;
 `
 
 export default Activities

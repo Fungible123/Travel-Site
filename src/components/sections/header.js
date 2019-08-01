@@ -53,6 +53,7 @@ const ImageContainer = styled.div`
 `
 
 const Card = styled.div`
+  text-align: center;
   width: 40%;
   height: 45%;
   padding: 40px 30px;
