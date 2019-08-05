@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "@common/Layout"
-import Navbar from "@common/Navbar"
-import Header from "@sections/Header"
-import Gallery from "@sections/Gallery"
-import Activities from "@sections/Activities"
-import Rooms from "@sections/Rooms"
-import Contact from "@sections/Contact"
-import Footer from "@sections/Footer"
+import Layout from "@common/layout"
+import Navbar from "@common/navbar"
+import Header from "@sections/header"
+import Gallery from "@sections/gallery"
+import Activities from "@sections/activities"
+import Rooms from "@sections/rooms"
+import Contact from "@sections/contact"
+import Footer from "@sections/footer"
 
 const IndexPage = () => (
   <Layout>

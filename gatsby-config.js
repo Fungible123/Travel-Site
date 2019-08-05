@@ -41,8 +41,6 @@ module.exports = {
           "@images": path.resolve(__dirname, "src/images"),
           "@sections": path.resolve(__dirname, "src/components/sections"),
           "@styles": path.resolve(__dirname, "src/styles/"),
-          "@static": path.resolve(__dirname, "static/"),
-          "@elements": path.resolve(__dirname, "src/elements"),
         },
       },
     },
