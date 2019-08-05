@@ -80,7 +80,7 @@ const Fields = styled(Field)`
 `
 
 const Error = styled.p`
-  color: ${props => props.theme.color.colorful.flesh};
+  color: red;
 `
 
 const encode = data => {
@@ -156,7 +156,9 @@ const Contact = () => {
               <FormContainers>
                 <Label htmlFor="message">Message *</Label>
                 <Fields message name="message" component="textarea" rows="6" />
-                {touched.message && errors.message && <p>{errors.message}</p>}
+                {touched.message && errors.message && (
+                  <Error>{errors.message}</Error>
+                )}
               </FormContainers>
             </div>
           </Grid>
