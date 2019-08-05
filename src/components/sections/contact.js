@@ -79,6 +79,10 @@ const Fields = styled(Field)`
     `}
 `
 
+const Error = styled.p`
+  color: ${props => props.theme.color.colorful.flesh};
+`
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -131,12 +135,12 @@ const Contact = () => {
               <FormContainers>
                 <Label htmlFor="name">Name *</Label>
                 <Fields type="text" name="name" />
-                {touched.name && errors.name && <p>{errors.name}</p>}
+                {touched.name && errors.name && <Error>{errors.name}</Error>}
               </FormContainers>
               <FormContainers>
                 <Label htmlFor="email">Email Address *</Label>
                 <Fields type="text" name="email" />
-                {touched.email && errors.email && <p>{errors.email}</p>}
+                {touched.email && errors.email && <Error>{errors.email}</Error>}
               </FormContainers>
               <ButtonContainers>
                 <input type="reset" value="Clear" />
