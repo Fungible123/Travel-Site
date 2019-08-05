@@ -41,7 +41,6 @@ typings/
 
 # Optional npm cache directory
 
-
 # Optional eslint cache
 .eslintcache
 
@@ -56,6 +55,7 @@ typings/
 
 # gatsby files
 .cache/
+public
 
 # Mac files
 .DS_Store
