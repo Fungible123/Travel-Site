@@ -4,6 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Container } from "@components/global"
 import {
+  Transition,
   Nav,
   NavItem,
   Logo,
@@ -19,6 +20,24 @@ const NAV_ITEMS = ["Gallery", "Activities", "Rooms", "Contact"]
 class Navbar extends Component {
   state = {
     mobileMenuOpen: false,
+    show: true,
+    scrollPos: 0,
+  }
+
+  handleScroll = () => {
+    const { scrollPos } = this.state
+    this.setState({
+      scrollPos: document.body.getBoundingClientRect().top,
+      show: document.body.getBoundingClientRect().top > scrollPos,
+    })
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll)
   }
 
   toggleMobileMenu = () => {
@@ -56,33 +75,35 @@ class Navbar extends Component {
     const { mobileMenuOpen } = this.state
 
     return (
-      <Nav {...this.props}>
-        <StyledContainer>
-          <Logo>
-            <Link to="/">Akaw Resort</Link>
-          </Logo>
+      <Transition>
+        <Nav {...this.props} className={this.state.show ? "active" : "hidden"}>
+          <StyledContainer>
+            <Logo>
+              <Link to="/">Akaw Resort</Link>
+            </Logo>
+            <Mobile>
+              <button
+                onClick={this.toggleMobileMenu}
+                style={{
+                  color: "white",
+                  background: "none",
+                  border: "none",
+                }}
+              >
+                <MenuIcon />
+              </button>
+            </Mobile>
+            <Mobile hide>{this.getNavList({})}</Mobile>
+          </StyledContainer>
           <Mobile>
-            <button
-              onClick={this.toggleMobileMenu}
-              style={{
-                color: "white",
-                background: "none",
-                border: "none",
-              }}
-            >
-              <MenuIcon />
-            </button>
+            {mobileMenuOpen && (
+              <MobileMenu>
+                <Container>{this.getNavList({ mobile: true })}</Container>
+              </MobileMenu>
+            )}
           </Mobile>
-          <Mobile hide>{this.getNavList({})}</Mobile>
-        </StyledContainer>
-        <Mobile>
-          {mobileMenuOpen && (
-            <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
-            </MobileMenu>
-          )}
-        </Mobile>
-      </Nav>
+        </Nav>
+      </Transition>
     )
   }
 }

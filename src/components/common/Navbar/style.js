@@ -1,12 +1,25 @@
 import styled from "styled-components"
 import { Container } from "@components/global"
 
+export const Transition = styled.div`
+  .active {
+    visibility: visible;
+    transition: all 200ms ease-in;
+  }
+  .hidden {
+    visibility: hidden;
+    transition: all 200ms ease-out;
+    transform: translate(0, -100%);
+  }
+`
+
 export const Nav = styled.nav`
   padding: 15px 0;
   background-color: none;
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
 `
 
