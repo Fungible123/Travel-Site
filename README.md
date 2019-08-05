@@ -2,7 +2,7 @@
 - A static website built with Gatsby + React
 - Website name: Akaw Beach Resort
 
-Published: 
+Published: https://akawbeachresort.netlify.com
 
 ### Design
 
