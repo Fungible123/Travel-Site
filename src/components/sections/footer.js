@@ -109,7 +109,7 @@ const CardContainer = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
-    margin: 10px 10px;
+    margin: 0px 10px;
   }
 `
 
