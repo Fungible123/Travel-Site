@@ -119,6 +119,7 @@ const FooterCard = styled.div`
   border-radius: 5px;
   padding: 40px 5px;
   text-align: center;
+  margin: 20px 0;
 
   hr {
     width: 60%;
