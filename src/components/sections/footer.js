@@ -100,7 +100,7 @@ const Background = styled(BackgroundImage)`
 `
 
 const CardContainer = styled.div`
-  margin: 60px auto;
+  margin: 0 auto;
   max-width: 825px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
