@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "@common/Button"
 
-const BackgroundSection = ({ className }) => (
+const BackgroundSection = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -18,10 +18,9 @@ const BackgroundSection = ({ className }) => (
       }
     `}
     render={data => {
-      // Set ImageData.
       const imageData = data.background.childImageSharp.fluid
       return (
-        <BackgroundImage Tag="section" className={className} fluid={imageData}>
+        <BackgroundImage Tag="section" fluid={imageData}>
           <ImageContainer>
             <Card>
               <Intro>

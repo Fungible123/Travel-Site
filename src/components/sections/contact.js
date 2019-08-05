@@ -43,6 +43,7 @@ const ButtonContainers = styled.div`
     border: 1px solid #ffffff;
     color: ${props => props.theme.color.light};
     font-family: ${props => props.theme.font.secondary};
+    cursor: pointer;
   }
 `
 
@@ -115,6 +116,7 @@ const Contact = () => {
         handleReset,
       }) => (
         <Form
+          id="contact"
           name="contact"
           onSubmit={handleSubmit}
           onReset={handleReset}
