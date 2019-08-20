@@ -78,10 +78,11 @@ const Card = styled.div`
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 70%;
-    height: 50%;
+    height: 40%;
     position: relative;
     left: 15%;
     top: 35%;
+    padding: 10px;
   }
 `
 
@@ -89,6 +90,9 @@ const Intro = styled.h2`
   text-align: center;
   color: ${props => props.theme.color.light};
   @media (max-width: ${props => props.theme.screen.md}) {
+    ${props => props.theme.font_size.regular}
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
     ${props => props.theme.font_size.regular}
   }
 `
