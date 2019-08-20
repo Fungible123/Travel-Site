@@ -118,6 +118,9 @@ const ActivityImage = styled.figure`
 const Content = styled.div`
   margin: 30px;
   padding: 10px 40px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin: 0px;
+  }
 `
 
 export default Activities

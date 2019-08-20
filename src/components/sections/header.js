@@ -95,6 +95,9 @@ const Intro = styled.h2`
   @media (max-width: ${props => props.theme.screen.sm}) {
     ${props => props.theme.font_size.regular}
   }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    ${props => props.theme.font_size.small}
+  }
 `
 
 export default Header
