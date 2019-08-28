@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
+import ExternalLink from "@common/ExternalLinks"
 
 const Footer = () => (
   <StaticQuery
@@ -63,27 +64,15 @@ const Footer = () => (
             <FooterCard>
               <h3>FOLLOW US</h3>
               <hr />
-              <a
-                href="http://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ExternalLink href="http://www.facebook.com">
                 <Social fluid={facebook} />
-              </a>
-              <a
-                href="http://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </ExternalLink>
+              <ExternalLink href="http://www.twitter.com">
                 <Social fluid={twitter} />
-              </a>
-              <a
-                href="http://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </ExternalLink>
+              <ExternalLink href="http://www.instagram.com">
                 <Social fluid={instagram} />
-              </a>
+              </ExternalLink>
             </FooterCard>
           </CardContainer>
         </Background>
