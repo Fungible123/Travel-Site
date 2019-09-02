@@ -53,33 +53,33 @@ const ImageContainer = styled.div`
 
 const Card = styled.div`
   text-align: center;
-  width: 40%;
-  height: 45%;
+  max-width: 40%;
+  max-height: 45%;
   padding: 40px 30px;
   background: rgba(250, 103, 20, 0.8);
   border-radius: 5px;
-  position: relative;
+  position: absolute;
   left: 615px;
   top: 250px;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
-    width: 40%;
-    height: 50%;
-    position: relative;
+    max-width: 40%;
+    max-height: 50%;
+    position: absolute;
     left: 415px;
     top: 250px;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 40%;
-    height: 50%;
-    position: relative;
+    max-width: 40%;
+    max-height: 50%;
+    position: absolute;
     left: 30%;
     top: 40%;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 70%;
-    height: 40%;
-    position: relative;
+    max-width: 70%;
+    max-height: 40%;
+    position: absolute;
     left: 15%;
     top: 35%;
     padding: 10px;
