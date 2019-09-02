@@ -78,7 +78,7 @@ const Card = styled.div`
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     max-width: 70%;
-    max-height: 40%;
+    max-height: 45%;
     position: absolute;
     left: 15%;
     top: 35%;
